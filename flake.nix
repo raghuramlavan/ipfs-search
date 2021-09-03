@@ -255,10 +255,8 @@
                     ExecStart =  "${self.packages.x86_64-linux.tikaExtractor}/bin/tika-extractor";
                    };
                 };
-             };
-   
+             }; 
 
-            config.services.ipfs.enable = config.services.ipfs-search.enable;
 
             config.systemd.services.ipfs-crawler = mkIf config.services.ipfs-search.enable {
               description = "The ipfs crawler";
